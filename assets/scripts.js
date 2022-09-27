@@ -11,6 +11,8 @@ function handleSearchFormSubmit(event) {
         return;
     }
 }
+
+// fetch api for brewery
 function getApi() {
     var requestUrl = 'https://api.openbrewerydb.org/breweries';
     fetch(requestUrl)
@@ -24,3 +26,14 @@ function getApi() {
     });
 }
 searchFormEl.addEventListener('beer-me-bro', handleSearchFormSubmit);
+
+// making this update to test github 
+// map API information
+var map = new google.maps.Map(mapCanvas, mapOptions);
+new google.maps.Map(HTMLElement,MapOptions)
+
+var mapOptions = {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:7,
+    mapTypeId: google.maps.MapTypeId.HYBRID
+  };
