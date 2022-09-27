@@ -35,7 +35,7 @@ User Story:
 	So that I can shop local and support the community.
 
 Mockup or rough sketch of the design: 
-![](assets/project%201%20sketch.png)
+![](assets/screenshot.png)
 
 APIs to be used: 
 https://www.openbrewerydb.org/
