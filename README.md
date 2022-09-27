@@ -1,4 +1,4 @@
-# Farmers-Market-Locator
+# Brewery-Locator-App
 Team #10
 Members: 
 Christopher Saechao
