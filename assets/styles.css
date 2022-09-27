@@ -1,3 +1,31 @@
 /* bulma is our main CSS styling so this page shouldny be needed but lets keep it just in case we want to do some cusotme work 
 Bulma is linked in the head of the HTML and is mobile first so it will look great on mobile automatically.  additionally it runs off flexbox so it should easy to maniplate.
 */
+
+
+main {
+    width: 100vl;
+    height: 50vh;
+    background-color: blue;
+}
+
+#map{
+    background-color: green;
+
+}
+
+#searchResults{
+    background-color: blueviolet;
+}
+
+aside {
+    width: 100vl;
+    height: 20vh;
+    background-color: black;
+}
+
+nav {
+    width: 100vl;
+    height: 10vh;
+    background-color: greenyellow;
+}
