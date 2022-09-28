@@ -23,12 +23,41 @@ blues
 
 
 
+header{
+    background-color: #5A8D92;
+    color: #AEA27C;
+    font-family: 'Chicle', cursive;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #502419;
+    
+}
+h1{
+    font-size: 80px;
+    
+}
+h2{
+    font-size: 30px;
 
+}
+
+
+#beer-me-bro {
+    background-color: #AEA27C;
+    font-family: 'Chicle', cursive;
+    color: #40531B;
+    
+
+}
+#beer-me-bro:hover{
+    background-color: #5C4430;
+    color: #F5E5FC;
+}
 
 main {
     width: 100vl;
     height: 50vh;
     background-color: blue;
+
 }
 
 #map{
@@ -51,6 +80,7 @@ nav {
     height: 10vh;
     background-color: greenyellow;
 }
+
 
 /* this section is to test our color story will not be in the code later */
 
