@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Chicle&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="assets/styles.css">
     <title>Brewery Locator</title>
@@ -12,50 +13,51 @@
 </head>
 
 <body>
-    <h1 class="columns is-centered title is-1 has-text-primary-dark has-background-light">B.L.</h1>
-    <h2 class="columns is-centered subtitle has-text-primary has-background-light">Brewery Locator</h2>
+    <header class="py-4">
+    <h1  class="mt-3 is-unselectable columns is-centered">The Brewery Locator</h1>
+    <h2 class="mt-3 is-unselectable columns is-centered"> THERE'S A COLD ONE JUST AROUND THE CORNER </h2>
+    </header>
     <nav class=>
-        <input id="search-form" 
-        class="form w-100"
-        type="text"
-        placeholder="TYPE HERE">
-        <button id="beer-me-bro">BEER ME BRO </button>
+        <input id="search-form" class="form w-100 ml-4" type="text" placeholder="TYPE HERE">
+        <button class="button is-medium" id="beer-me-bro">BEER ME BRO </button>
         <!-- this will always be present and not dynamically created in the JS should contain a serch input for the user and the value of the input should be run thru the JS into a fetch request -->
 
     </nav>
 
-    <main  id="mapBox">
+    <main class="has-text-white has-text-centered has-text-weight-bold" id="mapBox"> MAP
         <!-- this section will hold the map and should be dynamically created thru JS -->
         <div class="columns is-centered" id="map">
             <!-- this div is where the actual map will appear -->
         </div>
     </main>
 
-    <aside  id="searchResultsBox">
+    <aside class="has-text-white has-text-centered has-text-weight-bold" id="searchResultsBox"> Search Results
         <!-- this aside holds our search results -->
         <div class="columns is-centered" id="searchResults">
             <!-- this section should be dynamically created by JS and should reflect what the data is retrieved from the brewery API -->
         </div>
     </aside>
 
-<div class="colorSwatches">
-    <div id="color1">asparagus</div>
-    <div id="color2">fawn</div>
-    <div id="color3">caput mortuum</div>
-    <div id="color4">peach crayon</div>
-    <div id="color5">dark moss green</div>
-    <div id="color6">apricot</div>
-    <div id="color7">van dyke brown</div>
-    <div id="color8">ebony</div>
-    <div id="color9">russian green</div>
-    <div id="color10">artichoke</div>
-    <div id="color11">ecru</div>
-    <div id="color12">pale purple pantone</div>
-    <div id="color13">steel teal</div>
-    <div id="color14"></div>
-    <div id="color15"></div>
-    <footer class="has-text-centered">brought to you by the team at can't be beet</footer>
-    <script src="assets/scripts.js"></script>
+
+    <!-- this is just a test of colors and will be removed completly before deployment -->
+    <div class="colorSwatches">
+        <div class="has-text-white has-text-centered has-text-weight-bold" id="color1">asparagus</div>
+        <div class="has-text-black  has-text-centered has-text-weight-bold" id="color2">fawn</div>
+        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color3">caput mortuum</div>
+        <div class="has-text-black  has-text-centered has-text-weight-bold" id="color4">peach crayon</div>
+        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color5">dark moss green</div>
+        <div class="has-text-black  has-text-centered has-text-weight-bold" id="color6">apricot</div>
+        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color7">van dyke brown</div>
+        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color8">ebony</div>
+        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color9">russian green</div>
+        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color10">artichoke</div>
+        <div class="has-text-black  has-text-centered has-text-weight-bold" id="color11">ecru</div>
+        <div class="has-text-black has-text-centered has-text-weight-bold" id="color12">pale purple pantone</div>
+        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color13">steel teal</div>
+        <div id="color14"></div>
+        <div id="color15"></div>
+        <footer class="has-text-centered">brought to you by the team at can't be beet</footer>
+        <script src="assets/scripts.js"></script>
 </body>
 
 </html>
