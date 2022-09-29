@@ -10,7 +10,7 @@ Natalie Hartmann
 
 
 ## Installation
-<link to deployed site>
+https://tikomyster.github.io/Brewery-Locator-App/
 
 ## About this Project: 
 As a group, we decided that finding breweries should be as easy as clicking a button. So we wanted to create a simple user interface that grabs data about breweries and their location. Upon retrieving location results our user is presented with search results that tell you what the breweries in the area have to offer and given the option to navigate to the brewery.
