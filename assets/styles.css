@@ -56,7 +56,9 @@ h2{
 main {
     width: 100vl;
     height: 50vh;
-    background-color: blue;
+    background-color: #AEA27C;
+    font-family: 'Chicle', cursive;
+    color: #40531B;
 
 }
 
@@ -72,7 +74,9 @@ main {
 aside {
     width: 100vl;
     height: 20vh;
-    background-color: black;
+    background-color: #AEA27C;
+    font-family: 'Chicle', cursive;
+    color: #40531B;
 }
 
 nav {

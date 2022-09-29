@@ -17,46 +17,33 @@
     <h1  class="mt-3 is-unselectable columns is-centered">The Brewery Locator</h1>
     <h2 class="mt-3 is-unselectable columns is-centered"> THERE'S A COLD ONE JUST AROUND THE CORNER </h2>
     </header>
-    <nav class=>
-        <input id="search-form" class="form w-100 ml-4" type="text" placeholder="TYPE HERE">
-        <button class="button is-medium" id="beer-me-bro">BEER ME BRO </button>
+    <nav id="color13">
+        <div class="field has-addons">
+            <div class="control">
+        <input id="search-form" class="input ml-4 is-medium" type="text" placeholder="TYPE HERE">
+        </div>
+        <div class="control">
+        <button class="button is-medium" id="beer-me-bro" >BEER ME BRO</button>
+        </div>
         <!-- this will always be present and not dynamically created in the JS should contain a serch input for the user and the value of the input should be run thru the JS into a fetch request -->
-
+        </div>
     </nav>
 
-    <main class="has-text-white has-text-centered has-text-weight-bold" id="mapBox"> MAP
+    <main class="has-text-centered has-text-weight-bold is-size-6" id="mapBox"> BREWERY MAP
         <!-- this section will hold the map and should be dynamically created thru JS -->
         <div class="columns is-centered" id="map">
             <!-- this div is where the actual map will appear -->
         </div>
     </main>
 
-    <aside class="has-text-white has-text-centered has-text-weight-bold" id="searchResultsBox"> Search Results
+    <aside class="has-text-centered has-text-weight-bold is-size-6" id="searchResultsBox"> Search Results
         <!-- this aside holds our search results -->
         <div class="columns is-centered" id="searchResults">
             <!-- this section should be dynamically created by JS and should reflect what the data is retrieved from the brewery API -->
         </div>
     </aside>
 
-
-    <!-- this is just a test of colors and will be removed completly before deployment -->
-    <div class="colorSwatches">
-        <div class="has-text-white has-text-centered has-text-weight-bold" id="color1">asparagus</div>
-        <div class="has-text-black  has-text-centered has-text-weight-bold" id="color2">fawn</div>
-        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color3">caput mortuum</div>
-        <div class="has-text-black  has-text-centered has-text-weight-bold" id="color4">peach crayon</div>
-        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color5">dark moss green</div>
-        <div class="has-text-black  has-text-centered has-text-weight-bold" id="color6">apricot</div>
-        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color7">van dyke brown</div>
-        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color8">ebony</div>
-        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color9">russian green</div>
-        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color10">artichoke</div>
-        <div class="has-text-black  has-text-centered has-text-weight-bold" id="color11">ecru</div>
-        <div class="has-text-black has-text-centered has-text-weight-bold" id="color12">pale purple pantone</div>
-        <div class="has-text-white  has-text-centered has-text-weight-bold" id="color13">steel teal</div>
-        <div id="color14"></div>
-        <div id="color15"></div>
-        <footer class="has-text-centered">brought to you by the team at can't be beet</footer>
+        <footer class="has-text-centered">brought to you by the team at Wish You Were Beer</footer>
         <script src="assets/scripts.js"></script>
 </body>
 
