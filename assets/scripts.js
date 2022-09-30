@@ -1,76 +1,70 @@
 var searchBar = document.querySelector("#search-form")
-var city= $("#search-form").val()
+var city;
 
 
 function initMap() {
-    console.log("initMap")
 
-    map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 2,
-     center: new google.maps.LatLng(2.8, -187.3),
-      mapTypeId: "terrain",
-   });
-  
-    // Create a <script> tag and set the USGS URL as the source.
-  function getCity(){
-    var requestUrl = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
-      fetch(requestUrl)
-      .then(function(response) {
-          return response.json();
-      })
-      .then(function(data) {
-          console.log(data)
-           // Loop through the results array and place a marker for each
-  // set of coordinates.
-  // const eqfeed_callback = function (results) 
-  
-    for (let i = 0; i < data.length; i++) {
-      var lat = data[i].latitude
-      var lon = data[i].longitude
-      // const coords = results.features[i].geometry.coordinates;
-      const latLng = new google.maps.LatLng(lat, lon);
-      console.log(lat)
-      console.log(lon)
-      
-  
-      new google.maps.Marker({
-        position: latLng,
-        map: map,
-      });
-    };
-  
-  
+
+  map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 2,
+    center: new google.maps.LatLng(2.8, -187.3),
+    mapTypeId: "terrain",
+  });
+}
+// Create a <script> tag and set the USGS URL as the source.
+function getCity(city) {
+  var city = $("#search-form").val()
+  var requestUrl = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
+  console.log(city)
+  fetch(requestUrl)
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (data) {
+      console.log(data)
+      // Loop through the results array and place a marker for each
+      // set of coordinates.
+      // const eqfeed_callback = function (results) 
+
+      for (let i = 0; i < data.length; i++) {
+        var lat = data[i].latitude
+        var lon = data[i].longitude
+        var street = data[i].street
+        var name = data[i].name
+        var type = data[i].brewery_type
+        // const coords = results.features[i].geometry.coordinates;
+        const latLng = new google.maps.LatLng(lat, lon);
+        // console.log(lat)
+        // console.log(lon)
+        var streetDisplay = $("<p>").append("Street location: ", street)
+        var nameLocal = $("<p>").append("Name: ", name)
+        var brewType = $("<p>").append("Type: ", type)
+
+
+        // $("#searchResults").empty()
+        $("#searchResults").append(nameLocal);
+        $("#searchResults").append(brewType);
+        $("#searchResults").append(streetDisplay);
+
+        new google.maps.Marker({
+          position: latLng,
+          map: map,
+        });
+      };
+
+
       //     for (var i = 0; i < data.length; i++) {
       //     }
-         
-     }); 
+
+    });
 }
-getCity()
-} 
- 
-  window.initMap = initMap;
-  // window.eqfeed_callback = eqfeed_callback;
 
-//   function getCity(city) {
-//     city = $("#search-form").val()
 
-//     var queryURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAIWdiPqlsIKpfw96cOAE4EwH5PVcoU63o&callback=initMap";
-//     // appendHistory(city)
 
-//     //connects to the API to get inforation about location searched  byt the user
-//     fetch(queryURL)
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (data) {
-//             console.log(data)
+window.initMap = initMap;
+// window.eqfeed_callback = eqfeed_callback;
 
-           
-
-//         })
-// }
-
-$("#beer-me-bro").on("click",initMap)
+$("#beer-me-bro").on("click", getCity)
 
 
 // making this update to test github 
