@@ -20,29 +20,36 @@ function initMap() {
       })
       .then(function(data) {
           console.log(data)
-          for (var i = 0; i < data.length; i++) {
-          }
-         
-      }); 
-}
-getCity()
-} 
-  // Loop through the results array and place a marker for each
+           // Loop through the results array and place a marker for each
   // set of coordinates.
-  const eqfeed_callback = function (results) {
-    for (let i = 0; i < results.features.length; i++) {
-      const coords = results.features[i].geometry.coordinates;
-      const latLng = new google.maps.LatLng(coords[1], coords[0]);
+  // const eqfeed_callback = function (results) 
+  
+    for (let i = 0; i < data.length; i++) {
+      var lat = data[i].latitude
+      var lon = data[i].longitude
+      // const coords = results.features[i].geometry.coordinates;
+      const latLng = new google.maps.LatLng(lat, lon);
+      console.log(lat)
+      console.log(lon)
+      
   
       new google.maps.Marker({
         position: latLng,
         map: map,
       });
-    }
-  };
+    };
   
+  
+      //     for (var i = 0; i < data.length; i++) {
+      //     }
+         
+     }); 
+}
+getCity()
+} 
+ 
   window.initMap = initMap;
-  window.eqfeed_callback = eqfeed_callback;
+  // window.eqfeed_callback = eqfeed_callback;
 
 //   function getCity(city) {
 //     city = $("#search-form").val()
@@ -63,7 +70,7 @@ getCity()
 //         })
 // }
 
-$("beer-me-bro").on("click",initMap)
+$("#beer-me-bro").on("click",initMap)
 
 
 // making this update to test github 
