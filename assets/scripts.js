@@ -1,5 +1,5 @@
 var searchBar = document.querySelector("#search-form")
-var city;
+var city= $("#search-form").val()
 
 
 function initMap() {
@@ -12,7 +12,7 @@ function initMap() {
    });
   
     // Create a <script> tag and set the USGS URL as the source.
-  
+  function getCity(){
     var requestUrl = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
       fetch(requestUrl)
       .then(function(response) {
@@ -22,9 +22,11 @@ function initMap() {
           console.log(data)
           for (var i = 0; i < data.length; i++) {
           }
+         
       }); 
 }
-  
+getCity()
+} 
   // Loop through the results array and place a marker for each
   // set of coordinates.
   const eqfeed_callback = function (results) {
@@ -42,27 +44,27 @@ function initMap() {
   window.initMap = initMap;
   window.eqfeed_callback = eqfeed_callback;
 
-  function getCity(city) {
-    city = $("#search-form").val()
+//   function getCity(city) {
+//     city = $("#search-form").val()
 
-    var queryURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAIWdiPqlsIKpfw96cOAE4EwH5PVcoU63o&callback=initMap";
-    appendHistory(city)
+//     var queryURL = "https://maps.googleapis.com/maps/api/js?key=AIzaSyAIWdiPqlsIKpfw96cOAE4EwH5PVcoU63o&callback=initMap";
+//     // appendHistory(city)
 
-    //connects to the API to get inforation about location searched  byt the user
-    fetch(queryURL)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            // console.log(data)
+//     //connects to the API to get inforation about location searched  byt the user
+//     fetch(queryURL)
+//         .then(function (response) {
+//             return response.json();
+//         })
+//         .then(function (data) {
+//             console.log(data)
 
-            var lon = data.coord.lon
-            var lat = data.coord.lat
+           
 
-        })
-}
+//         })
+// }
 
 $("beer-me-bro").on("click",initMap)
+
 
 // making this update to test github 
 // map API information 
