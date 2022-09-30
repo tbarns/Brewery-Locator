@@ -15,56 +15,56 @@
 <body>
     <header class="hero py-4">
         <div class="hero-body">
-            <h1  class="mt-3 is-unselectable columns is-centered">The Brewery Locator</h1>
+            <h1 class="mt-3 is-unselectable columns is-centered">The Brewery Locator</h1>
             <h2 class="mt-3 is-unselectable columns is-centered"> THERE'S A COLD ONE JUST AROUND THE CORNER </h2>
         </div>
     </header>
-        <nav id="color13">
+    <nav id="color13">
         <div class="field has-addons">
             <div class="control">
-        <input id="search-form" class="input ml-4 is-medium" type="text" placeholder="TYPE HERE">
-        </div>
-        <div class="control">
-        <button class="button is-medium" id="beer-me-bro" >BEER ME BRO</button>
-        </div>
-        <!-- this will always be present and not dynamically created in the JS should contain a serch input for the user and the value of the input should be run thru the JS into a fetch request -->
+                <input id="search-form" class="input ml-4 is-medium" type="text" placeholder="TYPE HERE">
+            </div>
+            <div class="control">
+                <button class="button is-medium" id="beer-me-bro">BEER ME BRO</button>
+            </div>
+            <!-- this will always be present and not dynamically created in the JS should contain a serch input for the user and the value of the input should be run thru the JS into a fetch request -->
         </div>
     </nav>
 
-<div class="tile is ancestor">
-    <main class="tile is-parent has-text-centered has-text-weight-bold is-size-6" id="mapBox"> 
-        <p class="title p-3">BREWERY MAP</p>
-        <!-- this section will hold the map and should be dynamically created thru JS -->
-        <div class="tile is-child" id="map">
-           
-            <!-- this div is where the actual map will appear -->
-        </div>
-    </main>
+    <div class="tile is ancestor">
+        <main class="tile is-parent has-text-centered has-text-weight-bold is-size-6" id="mapBox">
+            <p class="title p-3">BREWERY MAP</p>
+            <!-- this section will hold the map and should be dynamically created thru JS -->
+            <div class="tile is-child" id="map">
 
-    <aside class="tile is-parent has-text-centered has-text-weight-bold is-size-6" id="searchResultsBox"> 
-        <p class= "title p-3">SEARCH RESULTS</p>
-        <!-- this aside holds our search results -->
-        <div class="tile is-child" id="searchResults">
-            <!-- this section should be dynamically created by JS and should reflect what the data is retrieved from the brewery API -->
-            <p class="content">search results</p>
-        </div>
-    </aside>
-</div>
-        <footer class="has-text-centered">brought to you by the team at Wish You Were Beer</footer>
-        
-        <!--map scripts info-->
+                <!-- this div is where the actual map will appear -->
+            </div>
+        </main>
+
+        <aside class="tile is-parent has-text-centered has-text-weight-bold is-size-6" id="searchResultsBox">
+            <p class="title p-3">SEARCH RESULTS</p>
+            <!-- this aside holds our search results -->
+            <div class="tile is-child">
+                <!-- this section should be dynamically created by JS and should reflect what the data is retrieved from the brewery API -->
+                <p class="content" id="searchResults"></p>
+            </div>
+        </aside>
+    </div>
+    <footer class="has-text-centered">brought to you by the team at Wish You Were Beer</footer>
+
+    <!--map scripts info-->
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/scripts.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIWdiPqlsIKpfw96cOAE4EwH5PVcoU63o&callback=initMap"  type="text/javascript"
-    ></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIWdiPqlsIKpfw96cOAE4EwH5PVcoU63o&callback=initMap"
+        type="text/javascript"></script>
     <script src="https://api.openbrewerydb.org/breweries?by_city" async defer></script>
-    
-    
-    
-    
+
+
+
+
 </body>
 
 </html>
