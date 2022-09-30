@@ -1,21 +1,28 @@
 var searchBar = document.querySelector("#search-form")
 var city;
+
+
 function initMap() {
-    
+    console.log("initMap")
 
     map = new google.maps.Map(document.getElementById("map"), {
       zoom: 2,
-      center: new google.maps.LatLng(2.8, -187.3),
+     center: new google.maps.LatLng(2.8, -187.3),
       mapTypeId: "terrain",
-    });
+   });
   
     // Create a <script> tag and set the USGS URL as the source.
-    const script = document.createElement("script");
   
-    // This example uses a local copy of the GeoJSON stored at
-    script.src =
-      "https://api.openbrewerydb.org/breweries?by_city";
-    document.getElementsByTagName("head")[0].appendChild(script);
+    var requestUrl = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
+      fetch(requestUrl)
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function(data) {
+          console.log(data)
+          for (var i = 0; i < data.length; i++) {
+          }
+      }); 
 }
   
   // Loop through the results array and place a marker for each
@@ -51,10 +58,11 @@ function initMap() {
 
             var lon = data.coord.lon
             var lat = data.coord.lat
-            fiveDay(lat, lon)
 
         })
 }
+
+$("beer-me-bro").on("click",initMap)
 
 // making this update to test github 
 // map API information 
