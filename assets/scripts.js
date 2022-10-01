@@ -1,4 +1,4 @@
-var searchBar = document.querySelector("#search-form")
+var searchBar = document.querySelector("#search-form");
 var city;
 
 
@@ -6,10 +6,12 @@ function initMap() {
 
 
   map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 2,
-    center: new google.maps.LatLng(2.8, -187.3),
+    zoom: 4,
+    center: new google.maps.LatLng(38.685516, -101.073324),
     mapTypeId: "terrain",
+    gestureHandling: "cooperative",
   });
+  
 }
 // Create a <script> tag and set the USGS URL as the source.
 function getCity(city) {
@@ -50,6 +52,7 @@ function getCity(city) {
           position: latLng,
           map: map,
         });
+        
       };
 
 
