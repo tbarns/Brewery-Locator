@@ -50,7 +50,7 @@ main {
 }
 
 #searchResults{
-    background-color: rgb(203, 169, 235);
+    background-color: #AEA27C;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
 }
@@ -90,5 +90,13 @@ nav {
     color: #F5E5FC;
 }
 
+#clear {
+    background-color: #AEA27C;
+    font-family: 'Chicle', cursive;
+    color: #5C4430; 
+}
 
-
+#clear:hover{
+    background-color: #5C4430;
+    color: #F5E5FC;
+}
