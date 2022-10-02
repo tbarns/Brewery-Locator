@@ -31,14 +31,15 @@
         </div>
     </nav>
 
-    <div class="tile is ancestor">
-        <main class="tile is-parent has-text-centered has-text-weight-bold is-size-6" id="mapBox">
-            <p class="title p-3">BREWERY MAP</p>
+    <div class="tile is-ancestor p-3">
+        <div class="tile is-parent breweryMapBox">
+        <p class="title p-3 has-text-centered" id="breweryMap">BREWERY MAP</p>
+        <main class="tile is-child image is-16by9 tile" id="mapBox">
             <!-- this section will hold the map and should be dynamically created thru JS -->
-            <div class="image is-16by9 tile is-child" id="map">
-
+            <div class="is-child has-ratio width=640 height=360 tile" id="map">
                 <!-- this div is where the actual map will appear -->
             </div>
+        </div>    
         </main>
 
         <aside class="tile is-parent has-text-centered has-text-weight-bold is-size-6" id="searchResultsBox">
