@@ -32,7 +32,7 @@
         </div>
     </nav>
 
-    <div class="tile is-ancestor p-3">
+    <div class="tile is-ancestor">
         <div class="tile is-parent breweryMapBox">
             <p class="title p-3 has-text-centered" id="breweryMap">BREWERY MAP</p>
             <main class="tile is-child image is-16by9 tile" id="mapBox">
@@ -52,31 +52,33 @@
             </div>
         </aside>
     </div>
-    <h2>Save Your Brews:</h2>
-    <div class="field"></div>
-    <h3>Beer Name:</h3>
-    <div class="field"></div>
-    <div class="control">
-        <input class="input" type="text" 
-        placeholder="Mystic Fern Lager"
-        id="save-your-brews">
-    </div>
-    <div class="field"></div>
-    <div class="control">
-        <button id="save-button" class="button is-primary">Save</button>
-      </div>
-      <div class="card" id="saved-brews">
-        <header class="card-header">
-          <p class="card-header-title">
-            Saved Brews
-          </p>
-        </header>
-        <div class="card-content">
-          <div class="content">
-          </div>
+
+    <!-- Save Your Brews local storage-->
+    <aside class="p-5">
+        <h2 class="title has-text-centered is-size-9">SAVE YOUR BREWS:</h2>
+        <div class="field"></div>
+        <h3>Beer Name:</h3>
+        <div class="control">
+            <input class="input" type="text" placeholder="Mystic Fern Lager" id="save-your-brews">
         </div>
-      </div>
-    <footer class="has-text-centered">brought to you by the team at Wish You Were Beer</footer>
+        <div class="field"></div>
+        <div class="control">
+            <button id="save-button" class="button is-medium saveBeerButton">Save</button>
+        </div>
+        <div class="card m-3" id="saved-brews">
+            <h3 class="card-header">
+                <p class="card-header-title savedBrewsHeader">Saved Brews:</p>
+            </h3>
+            <div class="card-content savedBrewsContent">
+                <div class="content">
+                </div>
+            </div>
+        </div>
+
+    </aside>
+    
+        <footer class="has-text-centered">brought to you by the team at Wish You Were Beer</footer>
+   
 
     <!--map scripts info-->
     <meta name="viewport" content="initial-scale=1.0">
