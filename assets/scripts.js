@@ -3,7 +3,7 @@ var city;
 var beer = document.querySelector("#save-your-brews");
 var saveButton = document.querySelector("save-button");
 
-renderFavoriteBeers();
+//renderFavoriteBeers();
 
 function initMap() {
 
@@ -65,39 +65,49 @@ function getCity(city) {
     });
 }
 
-renderFavoriteBeers();
+// renderFavoriteBeers();
 
-function displaySavedBrews (type) {
-    document.querySelector("#saved-brews").textContent = beer;
-    document.querySelector("#saved-brews").setAttribute("class", type);
-}
+// function displaySavedBrews (type) {
+//     document.querySelector("#saved-brews").textContent = beer;
+//     document.querySelector("#saved-brews").setAttribute("class", type);
+// }
 
-function renderFavoriteBeers() {
-    var beer = localStorage.getItem ("beerName");
-    if (!beerName) {
-        return;
-    }
-    beer.textContent = beer;
-}
+// function renderFavoriteBeers() {
+//     var beer = localStorage.getItem ("beerName");
+//     if (!beerName) {
+//         return;
+//     }
+//     beer.textContent = beer;
+// }
 
-saveButton.addEventListener("click", function(event){
-    event.preventDefault();
+// saveButton.addEventListener("click", function(event){
+//     event.preventDefault();
 
-// Add favorite beers to local storage
- var beerName = document.querySelector("#save_your_brews").value;
+// // Add favorite beers to local storage
+//  var beerName = document.querySelector("#save_your_brews").value;
 
- if(beerName === "") {
-    displayMessage("error", "Please enter the name of the beer you would like to save");
- } else {
-    displayMessage("success", "Beer has been saved");
+//  if(beerName === "") {
+//     displayMessage("error", "Please enter the name of the beer you would like to save");
+//  } else {
+//     displayMessage("success", "Beer has been saved");
  
-    localStorage.setItem("beerName", beerName);
-    renderFavoriteBeers();
-}
-});
+//     localStorage.setItem("beerName", beerName);
+//     renderFavoriteBeers();
+//}
+//});
 
 
-
+$( "#clear" ).click(function() {
+    $( "#searchResults" ).empty();
+   })
+   
+   
+   
+   
+   
+   
+   
+   
 
 
 window.initMap = initMap;
