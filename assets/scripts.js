@@ -3,10 +3,7 @@ var city;
 var beer = document.querySelector("#save-your-brews");
 var saveButton = document.querySelector("#save-button");
 
-
-
 function initMap() {
-
 
     map = new google.maps.Map(document.getElementById("map"), {
         zoom: 4,
@@ -58,10 +55,6 @@ function getCity(city) {
 
             };
 
-
-            //     for (var i = 0; i < data.length; i++) {
-            //     }
-
         });
 }
 
@@ -73,38 +66,36 @@ function displaySavedBrews(type) {
 }
 
 
-
-saveButton.addEventListener("click", function (event) {
-    event.preventDefault();
+saveButton.addEventListener("click", function () {
 
     // Add favorite beers to local storage
     var beerName = beer.value;
     console.log(beerName)
-    localStorage.setItem("beerName", beerName);
-    renderFavoriteBeers();
-    function renderFavoriteBeers() {
-        var beer = localStorage.getItem("beerName");
-        if (!beerName) {
-            return;
-        }
-        beer.textContent = beer;
+
+    function renderUserBeer() {
+
+        $(function () {
+            clickCount = + 0;
+
+            $('#save-button').click(function () {
+                ++clickCount;
+                localStorage.setItem(clickCount, beerName);
+            });
+        });
+        $("#userInput").val(localStorage.getItem("clickCount"))
+
+        //add code here to render to page
+
     }
 
+    renderUserBeer()
 });
-
-
 
 $("#clear").click(function () {
     $("#searchResults").empty();
 })
 
-
 window.initMap = initMap;
-// window.eqfeed_callback = eqfeed_callback;
 
 $("#beer-me-bro").on("click", getCity)
 
-
-// making this update to test github 
-// map API information 
-// map api key: AIzaSyAIWdiPqlsIKpfw96cOAE4EwH5PVcoU63o
