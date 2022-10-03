@@ -83,7 +83,10 @@ saveButton.addEventListener("click", function () {
         //add code here to render to page
         var beerDisplayEl = $("<div>").append(beerName)
         $("#saved-brews").append(beerDisplayEl);
+
     }
+
+
 
     renderUserBeer()
 });
