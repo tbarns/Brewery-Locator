@@ -60,10 +60,6 @@ function getCity(city) {
 
 
 
-function displaySavedBrews(type) {
-    document.querySelector("#saved-brews").textContent = beer;
-    document.querySelector("#saved-brews").setAttribute("class", type);
-}
 
 
 saveButton.addEventListener("click", function () {
@@ -75,7 +71,7 @@ saveButton.addEventListener("click", function () {
     function renderUserBeer() {
 
         $(function () {
-            clickCount = + 0;
+            clickCount = + 1;
 
             $('#save-button').click(function () {
                 ++clickCount;
@@ -85,7 +81,8 @@ saveButton.addEventListener("click", function () {
         $("#userInput").val(localStorage.getItem("clickCount"))
 
         //add code here to render to page
-
+        var beerDisplayEl = $("<div>").append(beerName)
+        $("#saved-brews").append(beerDisplayEl);
     }
 
     renderUserBeer()
