@@ -8,6 +8,8 @@ Timothy Barnaby
 Alli Dodt
 Natalie Hartmann
 
+## Application Link:
+https://tikomyster.github.io/Brewery-Locator-App/
 
 ## Installation
 https://tikomyster.github.io/Brewery-Locator-App/
@@ -18,9 +20,9 @@ As a group, we are responsible for this entire application from the crafting of 
 
 
 
-## Mockup or rough sketch of the design: 
+## Screenshot of Application:
 
-![](assets/screenshot.png)
+![](assets/screenshot_Brewery_Locator.html.png)
 
 ## APIs Used to Power this Application: 
 https://www.openbrewerydb.org/
@@ -34,4 +36,4 @@ JQUery
 google fonts
 
 ## License
-DO We HAVE ONE?
+MIT License
