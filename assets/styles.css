@@ -52,7 +52,8 @@ main {
 #searchResults{
     background-color: #AEA27C;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: #5C4430;
+    margin-top: 3rem;
 }
 
 aside {
