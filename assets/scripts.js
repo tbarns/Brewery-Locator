@@ -62,12 +62,13 @@ function getCity(city) {
 
 saveButton.addEventListener("click", function () {
 
-    // Add favorite beers to local storage
+    // Add favorite beers to local storage 
+    // *note* does not register the last input when refreshed
     var beerName = beer.value;
     console.log(beerName)
 
 
-
+    // Adds user input (top 10 beers) to local storage
     $(function () {
         clickCount = + 0;
 
@@ -78,7 +79,7 @@ saveButton.addEventListener("click", function () {
     });
     $("#userInput").val(localStorage.getItem("clickCount"))
 
-    //add code here to render to page
+    // This displays user information to the page
     var beerDisplayEl = $("<div>").append(beerName)
     $("#saved-brews").append(beerDisplayEl);
 
