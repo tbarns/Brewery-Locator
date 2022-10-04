@@ -3,6 +3,7 @@ var city;
 var beer = document.querySelector("#save-your-brews");
 var saveButton = document.querySelector("#save-button");
 
+
 function initMap() {
 
     map = new google.maps.Map(document.getElementById("map"), {
@@ -59,37 +60,45 @@ function getCity(city) {
 }
 
 
-
-
-
 saveButton.addEventListener("click", function () {
 
     // Add favorite beers to local storage
     var beerName = beer.value;
     console.log(beerName)
 
-    function renderUserBeer() {
 
-        $(function () {
-            clickCount = + 1;
 
-            $('#save-button').click(function () {
-                ++clickCount;
-                localStorage.setItem(clickCount, beerName);
-            });
+    $(function () {
+        clickCount = + 0;
+
+        $('#save-button').click(function () {
+            ++clickCount;
+            localStorage.setItem(clickCount, beerName);
         });
-        $("#userInput").val(localStorage.getItem("clickCount"))
+    });
+    $("#userInput").val(localStorage.getItem("clickCount"))
 
-        //add code here to render to page
-        var beerDisplayEl = $("<div>").append(beerName)
-        $("#saved-brews").append(beerDisplayEl);
+    //add code here to render to page
+    var beerDisplayEl = $("<div>").append(beerName)
+    $("#saved-brews").append(beerDisplayEl);
 
-    }
+}
 
 
+);
 
-    renderUserBeer()
-});
+//allows pulls beeers to be rendered via local storage amd persist on the page after refresh
+$("#userInput1").append(localStorage.getItem("1"))
+$("#userInput2").append(localStorage.getItem("2"))
+$("#userInput3").append(localStorage.getItem("3"))
+$("#userInput4").append(localStorage.getItem("4"))
+$("#userInput5").append(localStorage.getItem("5"))
+$("#userInput6").append(localStorage.getItem("6"))
+$("#userInput7").append(localStorage.getItem("7"))
+$("#userInput8").append(localStorage.getItem("8"))
+$("#userInput9").append(localStorage.getItem("9"))
+$("#userInput10").append(localStorage.getItem("10"))
+
 
 $("#clear").click(function () {
     $("#searchResults").empty();
