@@ -14,7 +14,7 @@ As a group, we are responsible for this entire application from the crafting of 
 
 ## Screenshot of Application:
 
-![](assets\Screenshot-1.png)
+![](assets/Screenshot-1.png)
 
 ## APIs Used to Power this Application: 
 https://www.openbrewerydb.org/<br />
