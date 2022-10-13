@@ -32,23 +32,23 @@
         </div>
     </nav>
 
-    <div class="tile is-ancestor">
-        <div class="tile is-parent breweryMapBox">
-            <p class="title p-3 has-text-centered" id="breweryMap">BREWERY MAP</p>
-            <main class="tile is-child image is-16by9 tile" id="mapBox">
+    <div class=" tile is-ancestor">
+        <div class=" tile is-child breweryMapBox">
+            <p class="mx-1 p-5 title has-text-centered" id="breweryMap">BREWERY MAP</p>
+            <main class=" tile is-child image is-16by9 tile " id="mapBox">
                 <!-- this section will hold the map and should be dynamically created thru JS -->
-                <div class="is-child has-ratio width=640 height=360 tile" id="map">
+                <div class="is-child  has-ratio width=640 height=360 tile" id="map">
                     <!-- this div is where the actual map will appear -->
                 </div>
         </div>
         </main>
 
-        <aside class="tile is-parent has-text-centered has-text-weight-bold is-size-6" id="searchResultsBox">
-            <p class="title p-3">SEARCH RESULTS</p>
+        <aside class="tile is-child has-text-centered has-text-weight-bold is-size-6" id="searchResultsBox">
+            <p class="title p-2 has-text-centered">SEARCH RESULTS</p>
             <!-- this aside holds our search results -->
             <div class="tile is-child">
                 <!-- this section should be dynamically created by JS and should reflect what the data is retrieved from the brewery API -->
-                <button class="button is-medium m-3" id="clear"> clear</button>
+
                 <p class="content" id="searchResults"></p>
             </div>
         </aside>
@@ -57,31 +57,38 @@
     <!-- Save Your Brews local storage-->
     <aside class="p-5">
         <h2 class="title has-text-centered is-size-9">SAVE YOUR BREWS:</h2>
-        <div class="field"></div>
-        <h3>Beer Name:</h3>
+        
+        
+        <div class="field has-addons">
         <div class="control">
-            <input class="input" type="text" placeholder="Mystic Fern Lager" id="save-your-brews">
+            <input class="input ml-4 is-medium" type="text" placeholder="save this beer for me" id="save-your-brews">
         </div>
-        <div class="field"></div>
+      
         <div class="control">
             <button id="save-button" class="button is-medium saveBeerButton">Save</button>
         </div>
+    </div>
+
+
+
+
+
         <div class="card m-3">
             <h3 class="card-header">
-                <p class="card-header-title savedBrewsHeader">My top ten brews:</p>
+                <p class="card-header-title savedBrewsHeader">BEST BREWS:</p>
             </h3>
             <div class="card-content savedBrewsContent" id="saved-brews">
                 <div class="content">
-                    <h2 id="userInput1"></h2>
-                    <h2 id="userInput2"></h2>
-                    <h2 id="userInput3"></h2>
-                    <h2 id="userInput4"></h2>
-                    <h2 id="userInput5"></h2>
-                    <h2 id="userInput6"></h2>
-                    <h2 id="userInput7"></h2>
-                    <h2 id="userInput8"></h2>
-                    <h2 id="userInput9"></h2>
-                    <h2 id="userInput10"></h2>
+                    <p id="userInput1"></p>
+                    <p id="userInput2"></p>
+                    <p id="userInput3"></p>
+                    <p id="userInput4"></p>
+                    <p id="userInput5"></p>
+                    <p id="userInput6"></p>
+                    <p id="userInput7"></p>
+                    <p id="userInput8"></p>
+                    <p id="userInput9"></p>
+                    <p id="userInput10"></p>
                 </div>
             </div>
         </div>
@@ -89,7 +96,6 @@
     </aside>
 
     <footer class="has-text-centered">brought to you by the team at Wish You Were Beer</footer>
-
 
     <!--map scripts info-->
     <meta name="viewport" content="initial-scale=1.0">

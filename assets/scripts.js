@@ -2,7 +2,7 @@ var searchBar = document.querySelector("#search-form");
 var city;
 var beer = document.querySelector("#save-your-brews");
 var saveButton = document.querySelector("#save-button");
-
+var clickCount = 0;
 
 function initMap() {
 
@@ -10,12 +10,13 @@ function initMap() {
         zoom: 4,
         center: new google.maps.LatLng(38.685516, -101.073324),
         mapTypeId: "terrain",
-        gestureHandling: "cooperative",
+        gestureHandling: "greedy",
     });
 
 }
 // Create a <script> tag and set the USGS URL as the source.
 function getCity(city) {
+    $("#searchResults").empty()
     var city = $("#search-form").val()
     var requestUrl = `https://api.openbrewerydb.org/breweries?by_city=${city}`;
     console.log(city)
@@ -44,10 +45,14 @@ function getCity(city) {
                 var brewType = $("<p>").append("Type: ", type)
 
 
-                // $("#searchResults").empty()
-                $("#searchResults").append(nameLocal);
-                $("#searchResults").append(brewType);
-                $("#searchResults").append(streetDisplay);
+                var resultsBox = $("<div>").append(nameLocal, streetDisplay, brewType)
+
+                $(resultsBox).addClass("card m-2 p-4 ").attr('id', 'resultsCards')
+
+                $("#searchResults").addClass("pagination column").append(resultsBox)
+                // $(resultsBox).append(nameLocal);
+                // $(resultsBox).append(brewType);
+                // $(resultsBox).append(streetDisplay);
 
                 new google.maps.Marker({
                     position: latLng,
@@ -57,36 +62,25 @@ function getCity(city) {
             };
 
         });
+    searchBar.value = ""
 }
-
 
 saveButton.addEventListener("click", function () {
 
-    // Add favorite beers to local storage 
-    // *note* does not register the last input when refreshed
+    // Add favorite beers to local storage
     var beerName = beer.value;
     console.log(beerName)
 
+    ++clickCount;
+    localStorage.setItem(clickCount, beerName);
 
-    // Adds user input (top 10 beers) to local storage
-    $(function () {
-        clickCount = + 0;
-
-        $('#save-button').click(function () {
-            ++clickCount;
-            localStorage.setItem(clickCount, beerName);
-        });
-    });
-    $("#userInput").val(localStorage.getItem("clickCount"))
-
-    // This displays user information to the page
-    var beerDisplayEl = $("<div>").append(beerName)
+    var beerDisplayEl = $("<div>").append(beerName).addClass("my-5")
     $("#saved-brews").append(beerDisplayEl);
+    $("#userInput").val(localStorage.getItem("clickCount"))
+});
 
-}
+//add code here to render to page
 
-
-);
 
 //allows pulls beeers to be rendered via local storage amd persist on the page after refresh
 $("#userInput1").append(localStorage.getItem("1"))
@@ -101,11 +95,7 @@ $("#userInput9").append(localStorage.getItem("9"))
 $("#userInput10").append(localStorage.getItem("10"))
 
 
-$("#clear").click(function () {
-    $("#searchResults").empty();
-})
 
 window.initMap = initMap;
 
 $("#beer-me-bro").on("click", getCity)
-

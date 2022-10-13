@@ -1,18 +1,22 @@
+body {
+    background-color: #AEA27C;
+}
 
-
-header{
+header {
     background-color: #5A8D92;
     color: #AEA27C;
     font-family: 'Chicle', cursive;
     -webkit-text-stroke: 1px;
     -webkit-text-stroke-color: #502419;
-    
+
 }
-h1{
+
+h1 {
     font-size: 80px;
-    
+
 }
-h2{
+
+h2 {
     font-size: 30px;
 
 }
@@ -22,10 +26,11 @@ h2{
     background-color: #AEA27C;
     font-family: 'Chicle', cursive;
     color: #5C4430;
-    
+
 
 }
-#beer-me-bro:hover{
+
+#beer-me-bro:hover {
     background-color: #5C4430;
     color: #F5E5FC;
 }
@@ -44,12 +49,13 @@ main {
     font-family: 'Chicle', cursive;
 }
 
-#map{
+#map {
     background-color: green;
+  
 
 }
 
-#searchResults{
+#searchResults {
     background-color: #AEA27C;
     font-family: Arial, Helvetica, sans-serif;
     color: #5C4430;
@@ -57,7 +63,7 @@ main {
 }
 
 aside {
-    
+
     background-color: #AEA27C;
     font-family: 'Chicle', cursive;
     color: #5C4430;
@@ -70,23 +76,25 @@ nav {
 }
 
 .savedBrewsHeader {
-    background-color: #5A8D92;
+    background-color: #5C4430;
+    color: #F5E5FC;
     font-family: 'Chicle', cursive;
-    color: #5C4430;
+        font-size: 40px;
 }
 
 .savedBrewsContent {
     background-color: #5A8D92;
+    font-size: 30px;
 }
 
 .saveBeerButton {
     background-color: #AEA27C;
     font-family: 'Chicle', cursive;
     color: #5C4430;
-    
+
 }
 
-.saveBeerButton:hover{
+.saveBeerButton:hover {
     background-color: #5C4430;
     color: #F5E5FC;
 }
@@ -94,10 +102,20 @@ nav {
 #clear {
     background-color: #AEA27C;
     font-family: 'Chicle', cursive;
-    color: #5C4430; 
+    color: #5C4430;
 }
 
-#clear:hover{
+#clear:hover {
     background-color: #5C4430;
     color: #F5E5FC;
+}
+#resultsCards{
+    background-color: #5A8D92;
+}
+#resultsCards:hover {
+    background-color: #5C4430;
+    color: #F5E5FC;
+}
+.column{
+    padding: .1rem;
 }
