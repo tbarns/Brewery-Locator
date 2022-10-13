@@ -31,9 +31,9 @@ google fonts
 MIT License
 
 ## Contributors
-Timothy Barnaby
-Christopher Saechao
-Alli Dodt
+Timothy Barnaby<br />
+Christopher Saechao<br />
+Alli Dodt<br />
 Natalie Hartmann
 
 ## Questions
